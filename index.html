@@ -129,7 +129,7 @@
   }
   .brain-link line{ stroke:var(--teal); stroke-width:1.6; stroke-dasharray:5 4; opacity:.75; }
   .brain-inset{
-    position:absolute; top:14px; left:14px; width:250px; z-index:5;
+    position:absolute; top:14px; left:14px; width:300px; z-index:5;
     background:var(--panel2); border:1px solid var(--line); border-radius:10px; padding:9px;
   }
   .bi-title{ font-size:.63rem; letter-spacing:.1em; text-transform:uppercase;
@@ -153,7 +153,7 @@
     pointer-events:none; z-index:4; display:none;
   }
   .brain-link line{ stroke:var(--teal); stroke-width:1.6; stroke-dasharray:5 4; opacity:.75; }
-  .brain-inset{ position:static; width:250px; margin:0 auto 14px; }
+  .brain-inset{ position:static; width:300px; margin:0 auto 14px; }
   }
   .hotspot{
     position:absolute; transform:translate(-50%,-50%);
@@ -377,20 +377,27 @@
         <div class="brain-inset" id="brainInset">
           <div class="bi-title">Midsagittal brain — enlarged from the head</div>
           <div class="bi-stage" id="brainStage">
-            <svg viewBox="0 0 240 190" xmlns="http://www.w3.org/2000/svg">
-              <ellipse cx="118" cy="72" rx="96" ry="58" fill="#c9a08c" stroke="#7a5342" stroke-width="2"/>
-              <path d="M34,74 Q70,36 118,40 Q168,44 196,74" fill="none" stroke="#9c7461" stroke-width="1.6"/>
-              <path d="M56,86 Q92,60 132,66" fill="none" stroke="#a87f6b" stroke-width="2.4"/>
-              <ellipse cx="104" cy="96" rx="26" ry="17" fill="#b98b76" stroke="#7a5342" stroke-width="1.4"/>
-              <path d="M120,112 Q126,142 140,168 L162,168 Q146,138 142,110 Z" fill="#b0836e" stroke="#7a5342" stroke-width="1.6"/>
-              <ellipse cx="182" cy="132" rx="34" ry="26" fill="#a97b66" stroke="#7a5342" stroke-width="1.6"/>
-              <path d="M154,120 Q176,116 208,126" fill="none" stroke="#7a5342" stroke-width="1"/>
-              <path d="M160,132 Q180,128 210,138" fill="none" stroke="#7a5342" stroke-width="1"/>
-              <circle cx="146" cy="99" r="8" fill="#9c6b53" stroke="#5c3b28" stroke-width="1.6"/>
-              <path d="M96,110 L94,124" stroke="#5c3b28" stroke-width="2.6"/>
-              <ellipse cx="93" cy="133" rx="12" ry="9" fill="#d3ac7e" stroke="#5c3b28" stroke-width="1.6"/>
-              <text x="18" y="182" font-size="11" fill="#8b95ad">anterior</text>
-              <text x="196" y="182" font-size="11" fill="#8b95ad">posterior</text>
+            <svg viewBox="0 0 260 250" xmlns="http://www.w3.org/2000/svg">
+              <ellipse cx="120" cy="78" rx="100" ry="58" fill="#c9a08c" stroke="#7a5342" stroke-width="2"/>
+              <path d="M30,80 Q68,42 120,46 Q174,50 208,80" fill="none" stroke="#9c7461" stroke-width="1.6"/>
+              <path d="M54,92 Q92,66 134,72" fill="none" stroke="#a87f6b" stroke-width="2.4"/>
+              <ellipse cx="106" cy="102" rx="26" ry="16" fill="#b98b76" stroke="#7a5342" stroke-width="1.4"/>
+              <path d="M124,118 Q130,140 140,160 L160,160 Q146,138 144,116 Z" fill="#b0836e" stroke="#7a5342" stroke-width="1.6"/>
+              <ellipse cx="188" cy="132" rx="32" ry="24" fill="#a97b66" stroke="#7a5342" stroke-width="1.6"/>
+              <path d="M162,122 Q184,118 214,128" fill="none" stroke="#7a5342" stroke-width="1"/>
+              <circle cx="150" cy="102" r="7" fill="#9c6b53" stroke="#5c3b28" stroke-width="1.6"/>
+              <path d="M98,116 L96,128" stroke="#5c3b28" stroke-width="2.4"/>
+              <ellipse cx="95" cy="133" rx="8" ry="6" fill="#d3ac7e" stroke="#5c3b28" stroke-width="1.2"/>
+              <path d="M88,138 Q60,160 76,178" fill="none" stroke="#3fb9a8" stroke-width="1.4" stroke-dasharray="4 3"/>
+              <circle cx="130" cy="196" r="50" fill="#0e1420" stroke="#3fb9a8" stroke-width="1.4"/>
+              <path d="M130,152 L130,170" stroke="#5c3b28" stroke-width="5"/>
+              <text x="136" y="163" font-size="9" fill="#8b95ad">stalk</text>
+              <ellipse cx="112" cy="192" rx="21" ry="17" fill="#d3ac7e" stroke="#5c3b28" stroke-width="1.8"/>
+              <ellipse cx="150" cy="188" rx="14" ry="14" fill="#b98b76" stroke="#5c3b28" stroke-width="1.8"/>
+              <text x="92"  y="222" font-size="10" fill="#e0a83f" font-weight="bold">ANTERIOR</text>
+              <text x="140" y="236" font-size="10" fill="#4f8cd9" font-weight="bold">POSTERIOR</text>
+              <text x="10"  y="244" font-size="10" fill="#8b95ad">anterior</text>
+              <text x="212" y="244" font-size="10" fill="#8b95ad">posterior</text>
             </svg>
           </div>
         </div>
@@ -430,11 +437,11 @@
    1. DATA
    ============================================================ */
 const GLANDS = [
-  { id:"pineal", name:"Pineal gland", x:61.5, y:12.7, inset:{x:61,y:52},
+  { id:"pineal", name:"Pineal gland", x:61.5, y:12.7, inset:{x:57.7,y:39.2},
     fn:"Releases melatonin to set the sleep–wake cycle",
     hormones:[{n:"Melatonin", note:"secretion rises in darkness"}],
     cells:[{n:"Pinealocytes", note:"convert serotonin → melatonin"}] },
-  { id:"hypothalamus", name:"Hypothalamus", x:58.6, y:17.6, inset:{x:43,y:51},
+  { id:"hypothalamus", name:"Hypothalamus", x:58.6, y:17.6, inset:{x:40.0,y:41.6},
     fn:"Links the nervous system to the endocrine system",
     hormones:[
       {n:"TRH — thyrotropin-releasing hormone", note:"releasing: drives TSH"},
@@ -448,24 +455,28 @@ const GLANDS = [
     cells:[
       {n:"Parvocellular neurosecretory neurons", note:"secrete releasing/inhibiting hormones into portal veins"},
       {n:"Magnocellular neurons (SON &amp; PVN)", note:"make ADH and oxytocin"}] },
-  { id:"pituitary", name:"Pituitary gland", x:59.4, y:21.2, inset:{x:39,y:70},
-    fn:"The 'master gland' — directs hormone output of other glands",
+  { id:"pit-ant", name:"Anterior pituitary", sub:"adenohypophysis", x:59.4, y:21.2, inset:{x:43.1,y:76.0},
+    fn:"Makes six tropic hormones that direct the other glands",
     hormones:[
-      {n:"GH — growth hormone", note:"ANTERIOR lobe (adenohypophysis)"},
-      {n:"TSH — thyroid-stimulating hormone", note:"ANTERIOR lobe (adenohypophysis)"},
-      {n:"ACTH — adrenocorticotropic hormone", note:"ANTERIOR lobe (adenohypophysis)"},
-      {n:"FSH — follicle-stimulating hormone", note:"ANTERIOR lobe (adenohypophysis)"},
-      {n:"LH — luteinising hormone", note:"ANTERIOR lobe (adenohypophysis)"},
-      {n:"Prolactin (PRL)", note:"ANTERIOR lobe (adenohypophysis)"},
-      {n:"ADH — released here", note:"POSTERIOR lobe (neurohypophysis) — stored, not made"},
-      {n:"Oxytocin — released here", note:"POSTERIOR lobe (neurohypophysis) — stored, not made"}],
+      {n:"GH — growth hormone", note:"somatotrophs"},
+      {n:"TSH — thyroid-stimulating hormone", note:"thyrotrophs"},
+      {n:"ACTH — adrenocorticotropic hormone", note:"corticotrophs"},
+      {n:"FSH — follicle-stimulating hormone", note:"gonadotrophs"},
+      {n:"LH — luteinising hormone", note:"gonadotrophs"},
+      {n:"Prolactin (PRL)", note:"lactotrophs"}],
     cells:[
-      {n:"Somatotrophs (acidophils)", note:"ANTERIOR — ~50% of the lobe → GH"},
-      {n:"Lactotrophs (acidophils)", note:"ANTERIOR → prolactin"},
-      {n:"Corticotrophs (basophils)", note:"ANTERIOR → ACTH"},
-      {n:"Thyrotrophs (basophils)", note:"ANTERIOR → TSH"},
-      {n:"Gonadotrophs (basophils)", note:"ANTERIOR → FSH and LH"},
-      {n:"Pituicytes &amp; Herring bodies", note:"POSTERIOR — glia and swollen axon terminals"}] },
+      {n:"Somatotrophs (acidophils)", note:"~50% of the lobe → GH"},
+      {n:"Lactotrophs (acidophils)", note:"→ prolactin; enlarge in pregnancy"},
+      {n:"Corticotrophs (basophils)", note:"→ ACTH, cleaved from POMC"},
+      {n:"Thyrotrophs (basophils)", note:"→ TSH"},
+      {n:"Gonadotrophs (basophils)", note:"→ FSH and LH"}] },
+  { id:"pit-post", name:"Posterior pituitary", sub:"neurohypophysis", x:59.4, y:21.2, inset:{x:57.7,y:74.4},
+    fn:"Stores and releases ADH and oxytocin — it makes neither",
+    hormones:[
+      {n:"ADH — released here", note:"made in the hypothalamus, stored here"},
+      {n:"Oxytocin — released here", note:"made in the hypothalamus, stored here"}],
+    cells:[
+      {n:"Pituicytes &amp; Herring bodies", note:"glia and swollen axon terminals — no secretory cells"}] },
   { id:"thyroid", name:"Thyroid gland", x:58.1, y:33.5,
     fn:"Sets basal metabolic rate via T3 and T4",
     hormones:[
@@ -785,7 +796,7 @@ function buildChips(){
   const s = {};
 
   s.gland = GLANDS.filter(g=>g.id!=="gonad")
-    .map(g=>({id:"g-"+g.id, key:g.id, label:g.name, note:"", group:g.id}));
+    .map(g=>({id:"g-"+g.id, key:g.id, label:g.name, note:g.sub||"", group:g.id}));
   s.gland.push({id:"g-ov", key:"gonad", label:"Ovaries", note:"female", group:"gonad"});
   s.gland.push({id:"g-te", key:"gonad", label:"Testes", note:"male", group:"gonad"});
 
@@ -903,6 +914,7 @@ const ICONS = {
   pancreas:`<svg viewBox="0 0 40 40"><path d="M6,20 Q6,14 12,14 Q26,12 34,18 Q36,22 32,24 Q22,28 14,26 Q6,25 6,20Z" fill="#d9b98a" stroke="#6b4a24" stroke-width="1"/></svg>`,
   gonad:`<svg viewBox="0 0 40 40"><ellipse cx="14" cy="20" rx="6" ry="8" fill="#d68f8f" stroke="#7a3d3d" stroke-width="1"/><ellipse cx="26" cy="20" rx="6" ry="8" fill="#d6a08f" stroke="#7a4a3d" stroke-width="1"/></svg>`
 };
+ICONS["pit-ant"]=ICONS["pit-post"]=ICONS.pituitary;
 AXES.forEach(a=>ICONS[a.id]="⚗️");
 
 /* ============================================================
